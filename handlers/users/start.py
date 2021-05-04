@@ -6,4 +6,7 @@ from loader import dp
 
 @dp.message_handler(CommandStart())
 async def bot_start(message: types.Message):
-    await message.answer(f"Привет, {message.from_user.full_name}!")
+    sti = open('other/stickers/hello.webp', 'rb')
+
+    await message.answer_sticker(sti)
+    await message.answer(f"Привет, фикрайдер, {message.from_user.full_name}!\nЯ - <b>Фикбуковский Помощник</b>, бот созданный, что бы помочь тебе как автору на фикбуке.",parse_mode='html')
