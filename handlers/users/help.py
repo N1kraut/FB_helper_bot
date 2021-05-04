@@ -9,6 +9,7 @@ async def bot_help(message: types.Message):
     text = ("Список команд: ",
             "/start - Начать диалог",
             "/help - Получить справку",
-            "/registrate - Зарегистрироваться")
+            "/registrate - Зарегистрироваться",
+            "/exit - выйти из аккаунта")
 
     await message.answer("\n".join(text))
