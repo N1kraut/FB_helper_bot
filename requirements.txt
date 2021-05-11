@@ -1,2 +1,7 @@
 aiogram~=2.12
 environs~=8.0.0
+python-dotenv~=0.17.1
+pysqlite3
+
+#sqlalchemy~=1.4.14
+#gino~=1.4.14
