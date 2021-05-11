@@ -6,7 +6,10 @@ async def set_default_commands(dp):
         [
             types.BotCommand("start", "Запустить бота"),
             types.BotCommand("help", "Вывести справку"),
-            types.BotCommand("registrate", "Зарегистрироваться"),
-            types.BotCommand("exit", "Выйти"),
+            #types.BotCommand("registrate", "Зарегистрироваться"),
+            types.BotCommand("Arhont_stat", "Статистика Архонта за неделю"),
+            types.BotCommand("Help_fc", "Общедоступная статистика фанфика"),
+            types.BotCommand("Help_ar", "Общедоступная статистика автора"),
+            #types.BotCommand("exit", "Выйти")
         ]
     )

@@ -12,10 +12,11 @@ class SQLighter:
         with self.connection:
             return self.cursor.execute("SELECT * FROM 'users' WHERE 'status' = ?", (status,)).fetchall()
 
-    def users_exists(self, user_login):
+    def users_exists(self, user_id):
         """проверяем есть ли юзер в базе"""
         with self.connection:
-            result = self.cursor.execute("SELECT * FROM 'users' WHERE 'user_login' = ?", (user_login,)).fetchall()
+            result = self.cursor.execute("SELECT * FROM users WHERE user_id = '%i'" % user_id).fetchall()
+            print(len(result))
             return bool(len(result))
 
     def add_users(self, user_id, user_login, user_password, status = True):
